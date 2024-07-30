@@ -1,0 +1,248 @@
+/* Reset margins and paddings, and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: gilroy, sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main container settings */
+#main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#back {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#back img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Top container */
+#top {
+    pointer-events: none;
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Working area */
+#workingarea {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
+    max-width: 1920px;
+}
+
+/* Navigation */
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+}
+
+#nleft, #nright {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+#nleft img {
+    height: 60px;
+}
+
+#nav a {
+    pointer-events: all;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    font-family: gilroy, sans-serif;
+}
+
+/* Hero section */
+#hero {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 3%;
+}
+
+#heroleft {
+    min-width: 50%;
+}
+
+#heroleft .elem {
+    position: relative;
+    height: 9vw;
+    overflow: hidden;
+}
+
+#heroleft .elem h1:nth-child(1) {
+    top: 0;
+}
+
+#heroleft .elem h1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    line-height: 0.9;
+    font-family: kajiro, serif;
+    color: #fff;
+    font-weight: 100;
+    font-size: 11vw;
+}
+
+#heroleft button {
+    pointer-events: all;
+    padding: 0.6vw 4vw;
+    font-size: 3vw;
+    margin-top: 2vw;
+    font-family: kajiro, serif;
+}
+
+/* Hero right section */
+#heroright {
+    min-width: 17%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: flex-end;
+}
+
+#heroright p {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
+}
+
+#heroright #imagediv {
+    width: 100%;
+    height: 170px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D);
+    background-size: cover;
+}
+
+#heroright p:nth-child(3) {
+    margin-bottom: 100px;
+}
+
+
+@media (max-width: 1024px) {
+    #workingarea {
+        width: 90%;
+    }
+
+    #nav {
+        padding: 20px 0;
+    }
+
+    #nleft, #nright {
+        gap: 30px;
+    }
+
+    #nleft img {
+        height: 50px;
+    }
+
+    #nav a {
+        font-size: 10px;
+    }
+
+    #hero {
+        margin-top: 5%;
+    }
+
+    #heroleft .elem h1 {
+        font-size: 8vw;
+    }
+
+    #heroleft button {
+        padding: 0.8vw 3vw;
+        font-size: 2.5vw;
+    }
+
+    #heroright {
+        min-width: 25%;
+        width: 30%;
+    }
+
+    #heroright p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+    }
+
+    #heroleft {
+        min-width: 100%;
+        margin-right: 0;
+    }
+
+    #heroright {
+        min-width: 100%;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    #heroright p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    #heroright #imagediv {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    #nav a {
+        font-size: 8px;
+    }
+
+    #nleft img {
+        height: 40px;
+    }
+
+    #heroleft .elem h1 {
+        font-size: 10vw;
+    }
+
+    #heroleft button {
+        padding: 1vw 2vw;
+        font-size: 2vw;
+    }
+}
